@@ -1,0 +1,10 @@
+Metric,Value
+Cleaned rows,206271
+Stations,3
+Start timestamp,2012-11-01 00:00:00
+End timestamp,2024-12-31 23:00:00
+PM2.5 available,162685
+PM10 available,147432
+Temperature available,132013
+Humidity available,146928
+WindSpeed available,125821

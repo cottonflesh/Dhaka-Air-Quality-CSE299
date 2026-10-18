@@ -1,0 +1,52 @@
+WEEK 5 — BASELINE + FIRST MACHINE-LEARNING MODEL
+Project: Dhaka Air Quality Prediction System
+Track 3: ML Model and Dataset Development
+
+1. OBJECTIVE
+Build a baseline and first ML model using the Week 4 cleaned Dhaka dataset.
+
+2. TARGET LIMITATION
+The supplied dataset has no AQI column or AQI category label. This Week 5 experiment therefore predicts PM2.5 concentration, not AQI. Do not present these results as AQI prediction results. To predict AQI, a validated AQI target or documented AQI calculation is needed.
+
+3. DATA AND SPLIT
+Input file: Dhaka_Air_Quality_Dates_Fixed_2012_2024.csv
+Total rows in cleaned file: 194,234
+Rows with valid PM2.5 and date: 155,774
+Training rows available before sample cap: 132,899
+Rows used to train model: 35,000
+Test rows: 22,875
+Data date range: 2012-11-01 to 2024-12-31
+Split: Train: before 2024-01-01; test: 2024 calendar year
+Training cap: up to 35,000 training rows sampled reproducibly (random_state=42) to keep the first experiment practical; test set remains the full 2024 target rows.
+
+Target: PM2.5
+Features: PM10, Temperature, Humidity, Wind Speed, Wind Direction, CO, NO2, SO2, O3, Rainfall, month, day, hour, day of week, and Location.
+Missing numeric features are imputed with training-set medians; missing location values use the most frequent category; location is one-hot encoded. Preprocessing is fitted only as part of the training pipeline.
+
+4. MODELS
+Baseline: constant prediction equal to the mean PM2.5 in the training set.
+First ML model: Random Forest Regressor with 35 trees, min_samples_leaf=3, random_state=42.
+
+5. RESULTS ON HELD-OUT TEST DATA
+                   Model  Test rows     MAE    RMSE      R²
+Baseline (training mean)      22875 54.2878 70.9029 -0.0063
+ Random Forest Regressor      22875 28.0010 45.5150  0.5853
+MAE: average absolute error; lower is better.
+RMSE: penalizes larger errors; lower is better.
+R²: higher is better; negative means worse than a constant test-mean predictor.
+
+6. INITIAL INTERPRETATION
+Random Forest improves on baseline MAE.
+Random Forest improves on baseline RMSE.
+These are initial results, not a final validated model. Missingness, station differences, measurement coverage, and distribution changes can affect performance.
+
+7. DELIVERABLES
+- Week5_Model_Evaluation.csv: baseline vs model metrics.
+- Week5_PM25_Test_Predictions.csv: actual and predicted PM2.5 for test rows.
+- Week5_Feature_Importance.csv: model feature importances.
+- Week5_Random_Forest_PM25_Model.joblib: fitted preprocessing + model pipeline.
+- Week5_Training_Code.py: reproducible training script.
+- Week5_Model_Results.xlsx: formatted results workbook.
+
+8. NEXT WEEK
+Compare additional models (e.g., Linear Regression and Gradient Boosting), analyze the largest errors, and document limitations. If AQI is the required final target, first obtain or derive a defensible AQI target.

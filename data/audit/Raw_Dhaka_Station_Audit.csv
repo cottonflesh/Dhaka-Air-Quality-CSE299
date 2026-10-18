@@ -1,0 +1,12 @@
+File,Location,raw_rows,valid_timestamp_rows,invalid_timestamp,pm25_present
+Bangladesh_CAMS_AirQuality_Meteorology_2012-2021.xlsx,BARC,80362,71688,8674,49285
+Bangladesh_CAMS_AirQuality_Meteorology_2012-2021.xlsx,Darussalam,80354,71688,8666,57561
+Bangladesh_CAMS_AirQuality_Meteorology_2012-2021.xlsx,Sangsad,58394,,58394,
+Bangladesh_CAMS_AirQuality_Meteorology_2022.xlsx,BARC,8761,8761,,8114
+Bangladesh_CAMS_AirQuality_Meteorology_2022.xlsx,Darussalam,8761,8761,,7898
+Bangladesh_CAMS_AirQuality_Meteorology_2023.xlsx,BARC,8765,8764,1,7237
+Bangladesh_CAMS_AirQuality_Meteorology_2023.xlsx,Darussalam,8764,8763,1,8162
+Bangladesh_CAMS_AirQuality_Meteorology_2023.xlsx,DoE,8764,8763,1,7250
+Bangladesh_CAMS_AirQuality_Meteorology_2024.xlsx,BARC,8785,8785,,8010
+Bangladesh_CAMS_AirQuality_Meteorology_2024.xlsx,Darussalam,8785,8785,,7261
+Bangladesh_CAMS_AirQuality_Meteorology_2024.xlsx,DoE,8785,8785,,7604
