@@ -1,0 +1,2 @@
+Forecast_Target,Persistence_Baseline,Lag_Features,Selected_Model,Train_Rows_Full,Train_Rows_Fitted,Validation_Rows,Test_Rows,Split
+PM2.5 at t+1 hour,Predicted PM2.5(t+1) = PM2.5(t),"1h, 3h, 6h, 24h",Random Forest,109689,10000,22182,22491,Train: through 2022 | Validation: 2023 | Test: 2024+

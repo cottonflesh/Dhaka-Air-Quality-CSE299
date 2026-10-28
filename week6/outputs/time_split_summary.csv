@@ -1,0 +1,4 @@
+Split,Rows,Start,End,Description
+Train,109689,2012-11-01,2022-12-31 23:00:00,Train: through 2022 | Validation: 2023 | Test: 2024+
+Validation,22182,2023-01-01,2023-12-31 23:00:00,Train: through 2022 | Validation: 2023 | Test: 2024+
+Test,22491,2024-01-01,2024-12-31 23:00:00,Train: through 2022 | Validation: 2023 | Test: 2024+
