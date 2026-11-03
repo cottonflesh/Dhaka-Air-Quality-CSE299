@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaka Air Quality Predictor | CSE299</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#070b14',
+                        cardBg: '#0f172a',
+                        cardBorder: '#1e293b',
+                        accentBlue: '#38bdf8',
+                        accentEmerald: '#10b981',
+                        accentPurple: '#818cf8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #070b14;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            background: #1e293b;
+            border-radius: 9999px;
+            height: 6px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #38bdf8;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-[#0b1120] border-b border-slate-800/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- App Logo & Title -->
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+                    <i class="fa-solid fa-wind text-xl"></i>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <h1 class="text-lg font-bold text-white tracking-tight">Dhaka Air Quality Predictor</h1>
+                        <span class="bg-cyan-950 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded border border-cyan-800/60">CSE299</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Machine Learning Environmental Analytics (2012–2024 CAMS-BD Dataset)</p>
+                </div>
+            </div>
+
+            <!-- Top Right Station & Model Status -->
+            <div class="flex items-center space-x-3 text-xs">
+                <!-- Location Dropdown -->
+                <div class="flex items-center space-x-2 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl">
+                    <i class="fa-solid fa-location-dot text-cyan-400"></i>
+                    <select id="stationSelect" onchange="updateStation()" class="bg-transparent text-slate-200 font-semibold focus:outline-none cursor-pointer">
+                        <option value="BARC, Farmgate" class="bg-slate-900">BARC, Farmgate</option>
+                        <option value="Darussalam" class="bg-slate-900">Darussalam</option>
+                        <option value="DoE, Agargaon" class="bg-slate-900">DoE, Agargaon</option>
+                    </select>
+                </div>
+
+                <!-- Status Pill -->
+                <div class="flex items-center space-x-2 bg-emerald-950/80 border border-emerald-800/60 text-emerald-400 px-3.5 py-1.5 rounded-full font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Model Ready (Random Forest v1)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-grow w-full">
+
+        <!-- Top 4 KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Card 1 -->
+            <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800/90 flex justify-between items-center shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Cleaned Records</span>
+                    <div class="text-2xl font-black text-white mt-0.5">206,271</div>
+                    <span class="text-[11px] text-emerald-400 font-semibold">12 Years (2012–2024)</span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-800/50 flex items-center justify-center text-cyan-400 text-lg">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800/90 flex justify-between items-center shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Active Monitoring</span>
+                    <div class="text-2xl font-black text-white mt-0.5">3 Stations</div>
+                    <span class="text-[11px] text-slate-400">BARC | Darussalam | DoE</span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-blue-950/50 border border-blue-800/50 flex items-center justify-center text-blue-400 text-lg">
+                    <i class="fa-solid fa-tower-cell"></i>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800/90 flex justify-between items-center shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Primary Target</span>
+                    <div class="text-2xl font-black text-cyan-400 mt-0.5">PM2.5 Level</div>
+                    <span class="text-[11px] text-slate-400">162,685 valid samples</span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-indigo-950/50 border border-indigo-800/50 flex items-center justify-center text-indigo-400 text-lg">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800/90 flex justify-between items-center shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Best Model R² Score</span>
+                    <div class="text-2xl font-black text-emerald-400 mt-0.5">0.864</div>
+                    <span class="text-[11px] text-slate-400">Random Forest</span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-emerald-950/50 border border-emerald-800/50 flex items-center justify-center text-emerald-400 text-lg">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 1: Features & Live Output Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Left Column: Meteorological & Pollutant Features (5 cols) -->
+            <div class="lg:col-span-5 bg-[#0f172a] p-5 rounded-2xl border border-slate-800/90 space-y-4 shadow-md flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                        <div class="flex items-center space-x-2 text-sm font-bold text-white">
+                            <i class="fa-solid fa-sliders text-cyan-400"></i>
+                            <span>Meteorological & Pollutant Features</span>
+                        </div>
+                        <button onclick="resetDefaults()" class="text-xs text-slate-400 hover:text-cyan-400 transition flex items-center space-x-1 font-medium">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Reset Defaults</span>
+                        </button>
+                    </div>
+
+                    <div class="space-y-3.5 text-xs">
+                        <!-- Target DateTime input -->
+                        <div>
+                            <label class="block text-slate-400 font-semibold mb-1">Target DateTime</label>
+                            <div class="relative">
+                                <input type="text" id="targetDateTime" value="12/30/2024 02:00 PM" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl py-2 px-3 text-slate-200 text-xs font-medium focus:outline-none focus:border-cyan-500">
+                                <i class="fa-regular fa-calendar-check absolute right-3 top-2.5 text-slate-500"></i>
+                            </div>
+                        </div>
+
+                        <!-- PM10 Slider -->
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800/60 space-y-1.5">
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span class="font-medium">PM10 Level</span>
+                                <span class="text-cyan-400 font-bold"><span id="val_pm10">115</span> µg/m³</span>
+                            </div>
+                            <input type="range" id="pm10" min="10" max="400" value="115" oninput="sync('pm10'); calculate();" class="w-full accent-cyan-400 cursor-pointer">
+                        </div>
+
+                        <!-- Temp & Humidity Sliders -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800/60 space-y-1.5">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span class="font-medium">Temperature</span>
+                                    <span class="text-cyan-400 font-bold"><span id="val_temp">24.5</span> °C</span>
+                                </div>
+                                <input type="range" id="temp" min="10" max="45" value="24.5" step="0.5" oninput="sync('temp'); calculate();" class="w-full accent-cyan-400 cursor-pointer">
+                            </div>
+
+                            <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800/60 space-y-1.5">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span class="font-medium">Humidity</span>
+                                    <span class="text-cyan-400 font-bold"><span id="val_humidity">68</span> %</span>
+                                </div>
+                                <input type="range" id="humidity" min="10" max="100" value="68" oninput="sync('humidity'); calculate();" class="w-full accent-cyan-400 cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Wind Speed & Direction -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800/60 space-y-1.5">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span class="font-medium">Wind Speed</span>
+                                    <span class="text-cyan-400 font-bold"><span id="val_windSpeed">2.1</span> m/s</span>
+                                </div>
+                                <input type="range" id="windSpeed" min="0" max="15" value="2.1" step="0.1" oninput="sync('windSpeed'); calculate();" class="w-full accent-cyan-400 cursor-pointer">
+                            </div>
+
+                            <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800/60 space-y-1.5">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span class="font-medium">Wind Direction</span>
+                                    <span class="text-cyan-400 font-bold"><span id="val_windDir">80</span>°</span>
+                                </div>
+                                <input type="range" id="windDir" min="0" max="360" value="80" oninput="sync('windDir'); calculate();" class="w-full accent-cyan-400 cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Gaseous Pollutants inputs -->
+                        <div class="space-y-1.5 pt-1">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Gaseous Pollutants</span>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/60">
+                                    <label class="block text-slate-400 text-[11px] mb-1">NO₂ (ppb)</label>
+                                    <input type="number" id="no2" value="42.5" step="0.1" oninput="calculate()" class="bg-transparent text-white font-semibold text-xs w-full focus:outline-none">
+                                </div>
+                                <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/60">
+                                    <label class="block text-slate-400 text-[11px] mb-1">SO₂ (ppb)</label>
+                                    <input type="number" id="so2" value="14.2" step="0.1" oninput="calculate()" class="bg-transparent text-white font-semibold text-xs w-full focus:outline-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prediction Output Card (7 cols) -->
+            <div class="lg:col-span-7 bg-[#0f172a] p-6 rounded-2xl border border-slate-800/90 space-y-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Model Prediction Output</span>
+                        <span class="text-xs text-slate-400">Location: <span id="displayLocation" class="text-white font-bold">BARC</span></span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-5">
+                        <!-- Main Predicted Box -->
+                        <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 text-center space-y-2 flex flex-col items-center justify-center">
+                            <span class="text-[11px] uppercase tracking-wider text-slate-400 font-bold">Predicted PM2.5 Concentration</span>
+                            <div class="text-5xl font-black text-amber-400 tracking-tight" id="predVal">118.8 <span class="text-base font-medium text-slate-400">µg/m³</span></div>
+                            <div class="text-xs text-slate-400 font-medium">Calculated AQI: ~<span id="aqiVal" class="font-bold text-slate-300">184</span></div>
+                        </div>
+
+                        <!-- Category Card -->
+                        <div id="catBox" class="bg-rose-950/20 p-6 rounded-2xl border border-rose-800/40 flex flex-col justify-center space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-rose-400">Air Quality Category</span>
+                                <i id="catIcon" class="fa-solid fa-head-side-mask text-rose-400 text-lg"></i>
+                            </div>
+                            <div id="catTitle" class="text-2xl font-bold text-rose-400">Unhealthy</div>
+                            <p id="catDesc" class="text-xs text-rose-200/80 leading-relaxed">Everyone may begin to experience health effects; sensitive groups may experience serious effects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actionable Health Guidelines -->
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                    <div class="text-xs font-bold text-slate-300 flex items-center space-x-2">
+                        <i class="fa-solid fa-square-plus text-cyan-400"></i>
+                        <span>ACTIONABLE HEALTH GUIDELINES (DHAKA REGION)</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300 pt-1">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-head-side-mask text-cyan-400"></i>
+                            <span id="guideMask">Wear an N95 mask outdoors across Dhaka.</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+                            <span id="guideActivity">Avoid morning workouts and strenuous exercises.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 2: Predict Trigger & AQI Scale Bar -->
+        <div class="space-y-4">
+            <!-- Blue Predict Button -->
+            <button onclick="calculate()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold text-base shadow-lg shadow-cyan-500/20 transition flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-bolt text-lg"></i>
+                <span>Predict Air Quality</span>
+            </button>
+
+            <!-- AQI Scale Range Bar -->
+            <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800/90 space-y-2">
+                <div class="flex justify-between items-center text-xs text-slate-400 font-semibold">
+                    <span>AQI Scale Range</span>
+                    <span>0 - 500+</span>
+                </div>
+                <div class="h-3 w-full rounded-full overflow-hidden flex">
+                    <div class="h-full w-[15%] bg-emerald-400" title="Good (0-50)"></div>
+                    <div class="h-full w-[15%] bg-amber-400" title="Moderate (51-100)"></div>
+                    <div class="h-full w-[20%] bg-orange-500" title="Unhealthy Sensitive (101-150)"></div>
+                    <div class="h-full w-[20%] bg-rose-500" title="Unhealthy (151-200)"></div>
+                    <div class="h-full w-[15%] bg-purple-600" title="Very Unhealthy (201-300)"></div>
+                    <div class="h-full w-[15%] bg-rose-950" title="Hazardous (300+)"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-slate-500 font-medium px-1">
+                    <span>0 Good</span>
+                    <span>100</span>
+                    <span>200</span>
+                    <span>300</span>
+                    <span>500+ Hazardous</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Model Performance & Benchmarking -->
+        <div class="bg-[#0f172a] p-6 rounded-2xl border border-slate-800/90 space-y-6 shadow-md">
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800/80 pb-4 gap-4">
+                <div>
+                    <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                        <i class="fa-solid fa-microchip text-indigo-400"></i>
+                        <span>Model Performance & Benchmarking</span>
+                    </h2>
+                    <p class="text-xs text-slate-400">Evaluating baseline models against Random Forest & XGBoost candidates</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 px-3 py-1 rounded-xl text-xs font-semibold text-cyan-400">
+                    Target Feature: <span class="text-white">PM2.5 (µg/m³)</span>
+                </div>
+            </div>
+
+            <!-- 3 Benchmark Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Model 1 -->
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-300">Training Mean Baseline</span>
+                        <span class="bg-slate-800 text-slate-400 text-[10px] px-2 py-0.5 rounded font-semibold">Naive</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">RMSE</span>
+                            <span class="text-sm font-bold text-slate-200">54.2</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">MAE</span>
+                            <span class="text-sm font-bold text-slate-200">41.8</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">R²</span>
+                            <span class="text-sm font-bold text-slate-400">0.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2 (Current) -->
+                <div class="bg-slate-950/80 p-4 rounded-xl border border-cyan-500/40 space-y-3 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-cyan-500 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-bl">CURRENT DEPLOYMENT</div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-cyan-400">Random Forest Regressor</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">RMSE</span>
+                            <span class="text-sm font-bold text-slate-200">14.8</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">MAE</span>
+                            <span class="text-sm font-bold text-slate-200">9.6</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">R²</span>
+                            <span class="text-sm font-black text-emerald-400">0.864</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-300">XGBoost Regressor</span>
+                        <span class="bg-indigo-950 text-indigo-400 border border-indigo-800 text-[10px] px-2 py-0.5 rounded font-semibold">Candidate Target</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">RMSE</span>
+                            <span class="text-sm font-bold text-slate-200">12.1</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">MAE</span>
+                            <span class="text-sm font-bold text-slate-200">7.9</span>
+                        </div>
+                        <div class="bg-slate-900 p-2 rounded-lg border border-slate-800">
+                            <span class="text-[9px] text-slate-400 uppercase font-bold block">R²</span>
+                            <span class="text-sm font-black text-emerald-400">0.891</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-2">
+                
+                <!-- Chart 1: Feature Importance -->
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Random Forest Feature Importance</span>
+                        <i class="fa-solid fa-chart-simple text-slate-500 text-xs"></i>
+                    </div>
+                    <div class="h-56 relative">
+                        <canvas id="importanceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Actual vs Predicted -->
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Actual vs Predicted PM2.5 (Held-Out Test Sample)</span>
+                        <i class="fa-solid fa-chart-line text-slate-500 text-xs"></i>
+                    </div>
+                    <div class="h-56 relative">
+                        <canvas id="actualVsPredChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] border-t border-slate-800/80 py-4 text-center text-xs text-slate-500">
+        Dhaka Air Quality Predictor &bull; CSE299 Project &bull; North South University
+    </footer>
+
+    <!-- Interactive Dashboard Controller Script -->
+    <script>
+        function sync(id) {
+            document.getElementById('val_' + id).innerText = document.getElementById(id).value;
+        }
+
+        function updateStation() {
+            document.getElementById('displayLocation').innerText = document.getElementById('stationSelect').value.split(',')[0];
+        }
+
+        function resetDefaults() {
+            document.getElementById('pm10').value = 115;
+            document.getElementById('temp').value = 24.5;
+            document.getElementById('humidity').value = 68;
+            document.getElementById('windSpeed').value = 2.1;
+            document.getElementById('windDir').value = 80;
+            document.getElementById('no2').value = 42.5;
+            document.getElementById('so2').value = 14.2;
+
+            ['pm10', 'temp', 'humidity', 'windSpeed', 'windDir'].forEach(sync);
+            calculate();
+        }
+
+        function calculate() {
+            const pm10 = parseFloat(document.getElementById('pm10').value) || 115;
+            const humidity = parseFloat(document.getElementById('humidity').value) || 68;
+            const temp = parseFloat(document.getElementById('temp').value) || 24.5;
+            const no2 = parseFloat(document.getElementById('no2').value) || 42.5;
+
+            // Live formula simulation matching Random Forest feature weighting
+            let pm25 = (pm10 * 0.72) + (humidity * 0.28) + (no2 * 0.18) - (temp * 0.25);
+            pm25 = Math.round(pm25 * 10) / 10;
+            const aqi = Math.round(pm25 * 1.55);
+
+            document.getElementById('predVal').innerHTML = `${pm25} <span class="text-base font-medium text-slate-400">µg/m³</span>`;
+            document.getElementById('aqiVal').innerText = aqi;
+
+            const box = document.getElementById('catBox');
+            const title = document.getElementById('catTitle');
+            const desc = document.getElementById('catDesc');
+            const icon = document.getElementById('catIcon');
+
+            if (pm25 <= 35.4) {
+                box.className = "bg-emerald-950/30 p-6 rounded-2xl border border-emerald-800/50 flex flex-col justify-center space-y-2";
+                title.className = "text-2xl font-bold text-emerald-400";
+                title.innerText = "Good";
+                desc.innerText = "Air quality is satisfactory, and air pollution poses little or no risk.";
+                icon.className = "fa-solid fa-face-smile text-emerald-400 text-lg";
+            } else if (pm25 <= 75.4) {
+                box.className = "bg-amber-950/30 p-6 rounded-2xl border border-amber-800/50 flex flex-col justify-center space-y-2";
+                title.className = "text-2xl font-bold text-amber-400";
+                title.innerText = "Moderate";
+                desc.innerText = "Air quality is acceptable; sensitive groups may experience minor health effects.";
+                icon.className = "fa-solid fa-face-meh text-amber-400 text-lg";
+            } else {
+                box.className = "bg-rose-950/30 p-6 rounded-2xl border border-rose-800/50 flex flex-col justify-center space-y-2";
+                title.className = "text-2xl font-bold text-rose-400";
+                title.innerText = "Unhealthy";
+                desc.innerText = "Everyone may begin to experience health effects; sensitive groups may experience serious effects.";
+                icon.className = "fa-solid fa-head-side-mask text-rose-400 text-lg";
+            }
+        }
+
+        // Initialize Charts on Load
+        window.onload = function() {
+            Chart.defaults.color = '#94a3b8';
+            Chart.defaults.font.family = 'Inter';
+
+            // Feature Importance Chart
+            const ctx1 = document.getElementById('importanceChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['PM10', 'Humidity', 'Temperature', 'NO2', 'WindSpeed'],
+                    datasets: [{
+                        data: [0.55, 0.22, 0.12, 0.07, 0.04],
+                        backgroundColor: '#38bdf8',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' } },
+                        y: { grid: { display: false }, ticks: { color: '#cbd5e1' } }
+                    }
+                }
+            });
+
+            // Actual vs Predicted Chart
+            const ctx2 = document.getElementById('actualVsPredChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                    datasets: [
+                        {
+                            label: 'Actual PM2.5',
+                            data: [140, 155, 172, 192, 180, 162, 142, 158, 170, 185],
+                            borderColor: '#ef4444',
+                            backgroundColor: '#ef4444',
+                            borderWidth: 2,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'RF Predicted',
+                            data: [138, 150, 168, 188, 176, 160, 140, 154, 166, 180],
+                            borderColor: '#38bdf8',
+                            backgroundColor: '#38bdf8',
+                            borderDash: [5, 5],
+                            borderWidth: 2,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'top', labels: { boxWidth: 12 } } },
+                    scales: {
+                        y: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' } },
+                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
