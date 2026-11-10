@@ -1,0 +1,13 @@
+HorizonHours,Split,Model,DailyOrigins,ObservedHours,MAE,RMSE
+24,test,Gradient boosting,815,19042,26.097,44.097
+24,test,Daily repeat,815,19042,32.653,55.465
+24,test,Persistence,815,19042,32.61,55.982
+24,validation,Gradient boosting,811,18908,29.33,49.894
+24,validation,Daily repeat,811,18908,36.441,64.642
+24,validation,Persistence,811,18908,38.831,66.408
+168,test,Gradient boosting,742,117854,31.77,49.694
+168,test,Daily repeat,742,117854,39.255,63.66
+168,test,Persistence,742,117854,40.176,64.015
+168,validation,Gradient boosting,746,118733,37.055,60.056
+168,validation,Persistence,746,118733,48.673,77.601
+168,validation,Daily repeat,746,118733,45.763,77.819

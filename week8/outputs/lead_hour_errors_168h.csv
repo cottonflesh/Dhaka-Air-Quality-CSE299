@@ -1,0 +1,1009 @@
+HorizonHours,Split,Model,LeadHour,MAE,RMSE,Hours
+168,test,Daily repeat,1,34.74,54.656,737.0
+168,test,Daily repeat,2,35.954,60.54,728.0
+168,test,Daily repeat,3,36.523,58.334,728.0
+168,test,Daily repeat,4,42.338,70.496,722.0
+168,test,Daily repeat,5,41.54,69.16,701.0
+168,test,Daily repeat,6,42.93,69.33,696.0
+168,test,Daily repeat,7,43.868,74.213,696.0
+168,test,Daily repeat,8,40.888,64.61,699.0
+168,test,Daily repeat,9,44.744,76.544,701.0
+168,test,Daily repeat,10,44.094,74.302,708.0
+168,test,Daily repeat,11,40.792,70.389,715.0
+168,test,Daily repeat,12,33.695,56.768,712.0
+168,test,Daily repeat,13,29.839,52.0,717.0
+168,test,Daily repeat,14,27.348,47.12,719.0
+168,test,Daily repeat,15,25.025,41.438,721.0
+168,test,Daily repeat,16,21.778,31.768,717.0
+168,test,Daily repeat,17,21.886,38.588,715.0
+168,test,Daily repeat,18,19.868,31.226,711.0
+168,test,Daily repeat,19,22.639,37.835,715.0
+168,test,Daily repeat,20,21.843,33.46,715.0
+168,test,Daily repeat,21,23.624,35.743,718.0
+168,test,Daily repeat,22,27.635,43.111,722.0
+168,test,Daily repeat,23,29.68,46.648,719.0
+168,test,Daily repeat,24,31.239,48.702,714.0
+168,test,Daily repeat,25,39.631,60.504,720.0
+168,test,Daily repeat,26,42.072,68.42,715.0
+168,test,Daily repeat,27,41.045,62.683,713.0
+168,test,Daily repeat,28,46.126,74.784,710.0
+168,test,Daily repeat,29,49.071,81.192,692.0
+168,test,Daily repeat,30,48.312,75.602,689.0
+168,test,Daily repeat,31,49.177,79.287,685.0
+168,test,Daily repeat,32,46.935,74.764,686.0
+168,test,Daily repeat,33,47.849,79.405,685.0
+168,test,Daily repeat,34,48.209,78.914,693.0
+168,test,Daily repeat,35,46.01,79.541,705.0
+168,test,Daily repeat,36,39.038,62.401,700.0
+168,test,Daily repeat,37,35.408,57.362,710.0
+168,test,Daily repeat,38,31.986,52.23,711.0
+168,test,Daily repeat,39,29.406,46.182,710.0
+168,test,Daily repeat,40,25.956,37.096,709.0
+168,test,Daily repeat,41,27.096,48.419,708.0
+168,test,Daily repeat,42,25.451,39.885,705.0
+168,test,Daily repeat,43,27.365,43.809,710.0
+168,test,Daily repeat,44,26.331,38.078,709.0
+168,test,Daily repeat,45,28.042,42.488,710.0
+168,test,Daily repeat,46,33.562,52.729,715.0
+168,test,Daily repeat,47,35.318,56.926,713.0
+168,test,Daily repeat,48,36.654,56.226,706.0
+168,test,Daily repeat,49,43.343,64.601,713.0
+168,test,Daily repeat,50,45.792,73.251,711.0
+168,test,Daily repeat,51,46.967,70.441,708.0
+168,test,Daily repeat,52,51.043,82.335,704.0
+168,test,Daily repeat,53,49.715,79.741,688.0
+168,test,Daily repeat,54,51.463,82.371,683.0
+168,test,Daily repeat,55,52.28,84.345,678.0
+168,test,Daily repeat,56,49.973,77.625,680.0
+168,test,Daily repeat,57,50.267,81.931,678.0
+168,test,Daily repeat,58,48.437,77.77,689.0
+168,test,Daily repeat,59,46.935,79.095,699.0
+168,test,Daily repeat,60,40.777,63.915,696.0
+168,test,Daily repeat,61,35.598,54.814,701.0
+168,test,Daily repeat,62,32.755,51.873,708.0
+168,test,Daily repeat,63,30.215,46.924,707.0
+168,test,Daily repeat,64,26.746,37.926,707.0
+168,test,Daily repeat,65,28.786,49.251,709.0
+168,test,Daily repeat,66,26.969,40.756,706.0
+168,test,Daily repeat,67,27.592,42.973,711.0
+168,test,Daily repeat,68,27.084,40.166,710.0
+168,test,Daily repeat,69,29.495,42.142,710.0
+168,test,Daily repeat,70,34.761,54.281,713.0
+168,test,Daily repeat,71,38.017,62.107,712.0
+168,test,Daily repeat,72,38.636,56.651,708.0
+168,test,Daily repeat,73,42.667,64.128,713.0
+168,test,Daily repeat,74,45.438,71.563,711.0
+168,test,Daily repeat,75,47.004,68.747,705.0
+168,test,Daily repeat,76,50.71,80.091,706.0
+168,test,Daily repeat,77,47.872,73.099,688.0
+168,test,Daily repeat,78,50.876,79.537,684.0
+168,test,Daily repeat,79,48.82,78.08,682.0
+168,test,Daily repeat,80,50.482,77.873,683.0
+168,test,Daily repeat,81,51.342,82.49,684.0
+168,test,Daily repeat,82,48.856,77.707,693.0
+168,test,Daily repeat,83,48.642,79.489,703.0
+168,test,Daily repeat,84,43.299,66.879,698.0
+168,test,Daily repeat,85,37.977,57.019,702.0
+168,test,Daily repeat,86,35.406,53.788,712.0
+168,test,Daily repeat,87,32.205,50.834,711.0
+168,test,Daily repeat,88,27.602,38.479,712.0
+168,test,Daily repeat,89,27.986,48.47,709.0
+168,test,Daily repeat,90,26.036,39.501,708.0
+168,test,Daily repeat,91,26.698,42.72,713.0
+168,test,Daily repeat,92,26.217,38.577,710.0
+168,test,Daily repeat,93,29.046,46.465,711.0
+168,test,Daily repeat,94,32.463,51.563,713.0
+168,test,Daily repeat,95,36.51,56.761,714.0
+168,test,Daily repeat,96,38.835,58.448,711.0
+168,test,Daily repeat,97,43.819,64.917,714.0
+168,test,Daily repeat,98,46.936,71.325,711.0
+168,test,Daily repeat,99,48.268,69.955,705.0
+168,test,Daily repeat,100,53.191,80.524,710.0
+168,test,Daily repeat,101,53.397,82.354,691.0
+168,test,Daily repeat,102,53.935,81.801,686.0
+168,test,Daily repeat,103,53.358,85.758,683.0
+168,test,Daily repeat,104,50.886,78.595,684.0
+168,test,Daily repeat,105,53.312,85.758,686.0
+168,test,Daily repeat,106,53.544,82.836,694.0
+168,test,Daily repeat,107,51.011,81.495,702.0
+168,test,Daily repeat,108,44.801,69.226,699.0
+168,test,Daily repeat,109,37.931,55.864,703.0
+168,test,Daily repeat,110,35.682,54.218,712.0
+168,test,Daily repeat,111,32.603,49.232,713.0
+168,test,Daily repeat,112,28.276,39.128,714.0
+168,test,Daily repeat,113,28.533,47.971,710.0
+168,test,Daily repeat,114,26.947,39.656,709.0
+168,test,Daily repeat,115,27.789,41.215,715.0
+168,test,Daily repeat,116,27.153,39.321,715.0
+168,test,Daily repeat,117,29.909,46.463,714.0
+168,test,Daily repeat,118,33.334,51.356,717.0
+168,test,Daily repeat,119,37.936,62.182,716.0
+168,test,Daily repeat,120,39.3,56.962,711.0
+168,test,Daily repeat,121,43.752,64.571,715.0
+168,test,Daily repeat,122,46.393,72.569,710.0
+168,test,Daily repeat,123,49.225,73.572,706.0
+168,test,Daily repeat,124,52.91,84.794,708.0
+168,test,Daily repeat,125,52.825,83.835,692.0
+168,test,Daily repeat,126,55.239,87.939,688.0
+168,test,Daily repeat,127,53.02,83.122,683.0
+168,test,Daily repeat,128,51.528,79.001,684.0
+168,test,Daily repeat,129,54.886,86.489,685.0
+168,test,Daily repeat,130,52.268,81.224,692.0
+168,test,Daily repeat,131,50.345,79.127,700.0
+168,test,Daily repeat,132,45.205,70.154,695.0
+168,test,Daily repeat,133,40.264,65.272,696.0
+168,test,Daily repeat,134,36.545,57.39,705.0
+168,test,Daily repeat,135,32.754,50.035,702.0
+168,test,Daily repeat,136,29.488,40.988,704.0
+168,test,Daily repeat,137,30.159,50.61,697.0
+168,test,Daily repeat,138,27.922,40.911,695.0
+168,test,Daily repeat,139,28.558,44.33,701.0
+168,test,Daily repeat,140,28.691,41.929,701.0
+168,test,Daily repeat,141,30.635,48.222,702.0
+168,test,Daily repeat,142,35.43,54.68,705.0
+168,test,Daily repeat,143,38.525,61.287,702.0
+168,test,Daily repeat,144,38.81,58.541,696.0
+168,test,Daily repeat,145,44.428,67.271,700.0
+168,test,Daily repeat,146,49.293,77.505,698.0
+168,test,Daily repeat,147,49.128,74.174,693.0
+168,test,Daily repeat,148,53.729,88.102,693.0
+168,test,Daily repeat,149,55.499,88.371,677.0
+168,test,Daily repeat,150,57.016,90.725,674.0
+168,test,Daily repeat,151,55.228,86.419,671.0
+168,test,Daily repeat,152,52.782,80.34,672.0
+168,test,Daily repeat,153,55.352,90.402,669.0
+168,test,Daily repeat,154,54.03,86.0,676.0
+168,test,Daily repeat,155,48.893,76.3,687.0
+168,test,Daily repeat,156,44.383,69.458,682.0
+168,test,Daily repeat,157,40.146,62.976,684.0
+168,test,Daily repeat,158,36.622,57.201,691.0
+168,test,Daily repeat,159,32.356,48.716,686.0
+168,test,Daily repeat,160,29.066,40.157,688.0
+168,test,Daily repeat,161,29.677,49.848,683.0
+168,test,Daily repeat,162,27.486,39.361,683.0
+168,test,Daily repeat,163,29.001,44.081,686.0
+168,test,Daily repeat,164,28.031,40.854,685.0
+168,test,Daily repeat,165,30.542,48.62,686.0
+168,test,Daily repeat,166,36.208,55.883,689.0
+168,test,Daily repeat,167,39.808,63.589,686.0
+168,test,Daily repeat,168,39.584,58.989,677.0
+168,test,Gradient boosting,1,25.685,37.7,737.0
+168,test,Gradient boosting,2,26.296,42.094,728.0
+168,test,Gradient boosting,3,29.019,45.428,728.0
+168,test,Gradient boosting,4,32.997,55.441,722.0
+168,test,Gradient boosting,5,33.581,54.744,701.0
+168,test,Gradient boosting,6,34.669,57.094,696.0
+168,test,Gradient boosting,7,33.855,57.782,696.0
+168,test,Gradient boosting,8,31.729,52.043,699.0
+168,test,Gradient boosting,9,33.939,58.839,701.0
+168,test,Gradient boosting,10,34.806,56.151,708.0
+168,test,Gradient boosting,11,34.181,55.717,715.0
+168,test,Gradient boosting,12,30.073,46.262,712.0
+168,test,Gradient boosting,13,26.292,40.348,717.0
+168,test,Gradient boosting,14,24.856,38.315,719.0
+168,test,Gradient boosting,15,22.357,35.459,721.0
+168,test,Gradient boosting,16,20.484,28.027,717.0
+168,test,Gradient boosting,17,20.075,33.93,715.0
+168,test,Gradient boosting,18,19.292,27.609,711.0
+168,test,Gradient boosting,19,20.37,30.333,715.0
+168,test,Gradient boosting,20,20.439,29.059,715.0
+168,test,Gradient boosting,21,22.689,31.976,718.0
+168,test,Gradient boosting,22,27.613,40.93,722.0
+168,test,Gradient boosting,23,29.514,42.585,719.0
+168,test,Gradient boosting,24,30.202,43.077,714.0
+168,test,Gradient boosting,25,32.348,47.818,720.0
+168,test,Gradient boosting,26,33.947,53.061,715.0
+168,test,Gradient boosting,27,34.465,52.918,713.0
+168,test,Gradient boosting,28,35.969,57.345,710.0
+168,test,Gradient boosting,29,38.282,62.157,692.0
+168,test,Gradient boosting,30,37.481,59.837,689.0
+168,test,Gradient boosting,31,37.586,62.557,685.0
+168,test,Gradient boosting,32,36.031,58.267,686.0
+168,test,Gradient boosting,33,37.804,63.74,685.0
+168,test,Gradient boosting,34,37.453,59.618,693.0
+168,test,Gradient boosting,35,36.336,58.748,705.0
+168,test,Gradient boosting,36,32.533,48.851,700.0
+168,test,Gradient boosting,37,28.504,42.834,710.0
+168,test,Gradient boosting,38,26.722,40.326,711.0
+168,test,Gradient boosting,39,24.278,37.637,710.0
+168,test,Gradient boosting,40,22.193,30.053,709.0
+168,test,Gradient boosting,41,22.236,36.765,708.0
+168,test,Gradient boosting,42,21.64,31.47,705.0
+168,test,Gradient boosting,43,22.145,33.406,710.0
+168,test,Gradient boosting,44,22.563,31.269,709.0
+168,test,Gradient boosting,45,25.254,36.415,710.0
+168,test,Gradient boosting,46,29.979,45.194,715.0
+168,test,Gradient boosting,47,31.617,48.911,713.0
+168,test,Gradient boosting,48,31.96,45.53,706.0
+168,test,Gradient boosting,49,34.108,49.324,713.0
+168,test,Gradient boosting,50,35.606,55.911,711.0
+168,test,Gradient boosting,51,36.287,54.027,708.0
+168,test,Gradient boosting,52,38.649,60.377,704.0
+168,test,Gradient boosting,53,39.442,62.85,688.0
+168,test,Gradient boosting,54,39.474,63.085,683.0
+168,test,Gradient boosting,55,39.309,64.794,678.0
+168,test,Gradient boosting,56,38.588,61.713,680.0
+168,test,Gradient boosting,57,39.384,63.955,678.0
+168,test,Gradient boosting,58,39.366,62.223,689.0
+168,test,Gradient boosting,59,37.943,61.28,699.0
+168,test,Gradient boosting,60,34.355,51.658,696.0
+168,test,Gradient boosting,61,30.214,47.15,701.0
+168,test,Gradient boosting,62,27.326,39.773,708.0
+168,test,Gradient boosting,63,24.786,38.016,707.0
+168,test,Gradient boosting,64,22.998,30.809,707.0
+168,test,Gradient boosting,65,23.388,37.289,709.0
+168,test,Gradient boosting,66,22.24,31.213,706.0
+168,test,Gradient boosting,67,22.401,33.292,711.0
+168,test,Gradient boosting,68,23.387,33.105,710.0
+168,test,Gradient boosting,69,26.369,37.354,710.0
+168,test,Gradient boosting,70,31.258,46.928,713.0
+168,test,Gradient boosting,71,34.38,54.772,712.0
+168,test,Gradient boosting,72,34.046,47.873,708.0
+168,test,Gradient boosting,73,36.247,52.227,713.0
+168,test,Gradient boosting,74,37.557,58.199,711.0
+168,test,Gradient boosting,75,37.809,54.496,705.0
+168,test,Gradient boosting,76,39.577,61.323,706.0
+168,test,Gradient boosting,77,40.343,63.496,688.0
+168,test,Gradient boosting,78,40.551,63.21,684.0
+168,test,Gradient boosting,79,39.748,63.749,682.0
+168,test,Gradient boosting,80,38.768,59.027,683.0
+168,test,Gradient boosting,81,39.582,63.331,684.0
+168,test,Gradient boosting,82,39.259,60.548,693.0
+168,test,Gradient boosting,83,38.917,60.217,703.0
+168,test,Gradient boosting,84,34.538,51.005,698.0
+168,test,Gradient boosting,85,30.682,44.464,702.0
+168,test,Gradient boosting,86,28.145,40.363,712.0
+168,test,Gradient boosting,87,25.821,40.809,711.0
+168,test,Gradient boosting,88,23.27,31.172,712.0
+168,test,Gradient boosting,89,23.374,37.482,709.0
+168,test,Gradient boosting,90,22.351,31.864,708.0
+168,test,Gradient boosting,91,22.458,33.349,713.0
+168,test,Gradient boosting,92,23.792,33.742,710.0
+168,test,Gradient boosting,93,27.466,42.318,711.0
+168,test,Gradient boosting,94,30.8,44.733,713.0
+168,test,Gradient boosting,95,33.738,49.023,714.0
+168,test,Gradient boosting,96,34.176,48.122,711.0
+168,test,Gradient boosting,97,35.554,50.451,714.0
+168,test,Gradient boosting,98,37.014,57.553,711.0
+168,test,Gradient boosting,99,38.946,56.197,705.0
+168,test,Gradient boosting,100,41.583,64.351,710.0
+168,test,Gradient boosting,101,40.993,64.04,691.0
+168,test,Gradient boosting,102,40.829,64.175,686.0
+168,test,Gradient boosting,103,40.619,65.759,683.0
+168,test,Gradient boosting,104,38.359,59.856,684.0
+168,test,Gradient boosting,105,40.19,64.139,686.0
+168,test,Gradient boosting,106,38.667,59.299,694.0
+168,test,Gradient boosting,107,38.959,60.73,702.0
+168,test,Gradient boosting,108,35.042,53.106,699.0
+168,test,Gradient boosting,109,30.087,41.715,703.0
+168,test,Gradient boosting,110,28.658,41.475,712.0
+168,test,Gradient boosting,111,26.463,40.096,713.0
+168,test,Gradient boosting,112,23.799,31.432,714.0
+168,test,Gradient boosting,113,23.799,37.55,710.0
+168,test,Gradient boosting,114,22.495,31.84,709.0
+168,test,Gradient boosting,115,23.065,34.321,715.0
+168,test,Gradient boosting,116,23.458,33.259,715.0
+168,test,Gradient boosting,117,26.401,40.732,714.0
+168,test,Gradient boosting,118,30.915,45.527,717.0
+168,test,Gradient boosting,119,34.328,53.471,716.0
+168,test,Gradient boosting,120,33.269,46.82,711.0
+168,test,Gradient boosting,121,34.71,48.805,715.0
+168,test,Gradient boosting,122,36.978,57.056,710.0
+168,test,Gradient boosting,123,37.96,54.884,706.0
+168,test,Gradient boosting,124,40.487,63.164,708.0
+168,test,Gradient boosting,125,41.207,63.797,692.0
+168,test,Gradient boosting,126,41.046,65.879,688.0
+168,test,Gradient boosting,127,39.057,60.563,683.0
+168,test,Gradient boosting,128,38.612,59.145,684.0
+168,test,Gradient boosting,129,40.971,64.742,685.0
+168,test,Gradient boosting,130,39.844,60.943,692.0
+168,test,Gradient boosting,131,39.275,60.87,700.0
+168,test,Gradient boosting,132,35.307,54.207,695.0
+168,test,Gradient boosting,133,32.163,50.022,696.0
+168,test,Gradient boosting,134,28.934,42.796,705.0
+168,test,Gradient boosting,135,25.735,38.099,702.0
+168,test,Gradient boosting,136,24.002,31.77,704.0
+168,test,Gradient boosting,137,24.07,38.292,697.0
+168,test,Gradient boosting,138,22.697,30.857,695.0
+168,test,Gradient boosting,139,23.44,34.108,701.0
+168,test,Gradient boosting,140,24.417,34.799,701.0
+168,test,Gradient boosting,141,27.398,42.26,702.0
+168,test,Gradient boosting,142,31.214,46.576,705.0
+168,test,Gradient boosting,143,34.189,53.683,702.0
+168,test,Gradient boosting,144,33.092,47.029,696.0
+168,test,Gradient boosting,145,34.347,48.469,700.0
+168,test,Gradient boosting,146,36.542,55.547,698.0
+168,test,Gradient boosting,147,37.523,54.218,693.0
+168,test,Gradient boosting,148,40.653,62.138,693.0
+168,test,Gradient boosting,149,40.857,63.75,677.0
+168,test,Gradient boosting,150,41.149,65.283,674.0
+168,test,Gradient boosting,151,39.747,64.7,671.0
+168,test,Gradient boosting,152,37.286,57.191,672.0
+168,test,Gradient boosting,153,39.032,62.397,669.0
+168,test,Gradient boosting,154,38.697,60.544,676.0
+168,test,Gradient boosting,155,36.939,55.789,687.0
+168,test,Gradient boosting,156,34.298,51.22,682.0
+168,test,Gradient boosting,157,31.115,48.199,684.0
+168,test,Gradient boosting,158,28.954,42.658,691.0
+168,test,Gradient boosting,159,25.972,38.693,686.0
+168,test,Gradient boosting,160,24.177,31.605,688.0
+168,test,Gradient boosting,161,24.274,38.033,683.0
+168,test,Gradient boosting,162,23.145,31.027,683.0
+168,test,Gradient boosting,163,23.67,33.913,686.0
+168,test,Gradient boosting,164,24.455,33.037,685.0
+168,test,Gradient boosting,165,27.559,41.301,686.0
+168,test,Gradient boosting,166,31.235,45.323,689.0
+168,test,Gradient boosting,167,33.894,53.662,686.0
+168,test,Gradient boosting,168,33.367,46.341,677.0
+168,test,Persistence,1,13.814,29.624,737.0
+168,test,Persistence,2,19.066,37.042,728.0
+168,test,Persistence,3,24.211,44.134,728.0
+168,test,Persistence,4,29.564,54.493,722.0
+168,test,Persistence,5,30.828,55.305,701.0
+168,test,Persistence,6,32.045,58.364,696.0
+168,test,Persistence,7,32.426,59.88,696.0
+168,test,Persistence,8,31.32,53.011,699.0
+168,test,Persistence,9,35.74,62.126,701.0
+168,test,Persistence,10,36.281,61.283,708.0
+168,test,Persistence,11,36.657,63.022,715.0
+168,test,Persistence,12,33.755,56.348,712.0
+168,test,Persistence,13,33.438,56.05,717.0
+168,test,Persistence,14,35.346,58.729,719.0
+168,test,Persistence,15,35.598,58.322,721.0
+168,test,Persistence,16,36.647,58.672,717.0
+168,test,Persistence,17,38.731,64.814,715.0
+168,test,Persistence,18,37.76,61.312,711.0
+168,test,Persistence,19,37.186,59.669,715.0
+168,test,Persistence,20,32.649,51.605,715.0
+168,test,Persistence,21,29.704,46.303,718.0
+168,test,Persistence,22,30.84,49.279,722.0
+168,test,Persistence,23,31.685,50.189,719.0
+168,test,Persistence,24,31.239,48.702,714.0
+168,test,Persistence,25,33.328,53.997,720.0
+168,test,Persistence,26,33.897,55.588,715.0
+168,test,Persistence,27,35.613,58.625,713.0
+168,test,Persistence,28,38.292,63.438,710.0
+168,test,Persistence,29,40.453,67.934,692.0
+168,test,Persistence,30,41.014,66.105,689.0
+168,test,Persistence,31,41.051,67.9,685.0
+168,test,Persistence,32,39.833,64.935,686.0
+168,test,Persistence,33,41.864,70.559,685.0
+168,test,Persistence,34,42.191,67.786,693.0
+168,test,Persistence,35,41.014,67.199,705.0
+168,test,Persistence,36,38.152,58.434,700.0
+168,test,Persistence,37,36.521,57.486,710.0
+168,test,Persistence,38,38.38,60.698,711.0
+168,test,Persistence,39,38.386,60.81,710.0
+168,test,Persistence,40,39.254,61.625,709.0
+168,test,Persistence,41,42.043,68.154,708.0
+168,test,Persistence,42,40.993,64.703,705.0
+168,test,Persistence,43,39.769,62.599,710.0
+168,test,Persistence,44,35.945,54.408,709.0
+168,test,Persistence,45,33.924,52.401,710.0
+168,test,Persistence,46,36.195,57.103,715.0
+168,test,Persistence,47,37.021,59.456,713.0
+168,test,Persistence,48,36.654,56.226,706.0
+168,test,Persistence,49,38.256,57.919,713.0
+168,test,Persistence,50,40.693,63.793,711.0
+168,test,Persistence,51,40.64,62.14,708.0
+168,test,Persistence,52,43.795,67.877,704.0
+168,test,Persistence,53,44.827,72.689,688.0
+168,test,Persistence,54,45.365,73.279,683.0
+168,test,Persistence,55,45.413,75.185,678.0
+168,test,Persistence,56,44.0,72.241,680.0
+168,test,Persistence,57,44.592,73.519,678.0
+168,test,Persistence,58,44.483,71.983,689.0
+168,test,Persistence,59,43.069,70.747,699.0
+168,test,Persistence,60,41.05,63.462,696.0
+168,test,Persistence,61,39.486,65.005,701.0
+168,test,Persistence,62,39.291,62.977,708.0
+168,test,Persistence,63,39.867,64.743,707.0
+168,test,Persistence,64,40.291,64.52,707.0
+168,test,Persistence,65,43.212,69.941,709.0
+168,test,Persistence,66,42.036,66.508,706.0
+168,test,Persistence,67,41.279,64.597,711.0
+168,test,Persistence,68,37.324,56.842,710.0
+168,test,Persistence,69,34.084,51.194,710.0
+168,test,Persistence,70,37.215,57.162,713.0
+168,test,Persistence,71,39.106,63.159,712.0
+168,test,Persistence,72,38.636,56.651,708.0
+168,test,Persistence,73,40.128,59.665,713.0
+168,test,Persistence,74,41.737,67.174,711.0
+168,test,Persistence,75,40.79,62.924,705.0
+168,test,Persistence,76,43.554,69.576,706.0
+168,test,Persistence,77,43.365,68.548,688.0
+168,test,Persistence,78,44.457,70.943,684.0
+168,test,Persistence,79,44.546,71.677,682.0
+168,test,Persistence,80,43.094,67.749,683.0
+168,test,Persistence,81,43.533,72.518,684.0
+168,test,Persistence,82,43.934,68.855,693.0
+168,test,Persistence,83,43.647,68.54,703.0
+168,test,Persistence,84,41.159,62.553,698.0
+168,test,Persistence,85,39.916,61.953,702.0
+168,test,Persistence,86,40.683,63.371,712.0
+168,test,Persistence,87,41.638,66.204,711.0
+168,test,Persistence,88,42.001,65.183,712.0
+168,test,Persistence,89,43.774,69.849,709.0
+168,test,Persistence,90,42.694,67.311,708.0
+168,test,Persistence,91,41.964,65.756,713.0
+168,test,Persistence,92,38.474,57.952,710.0
+168,test,Persistence,93,35.79,54.661,711.0
+168,test,Persistence,94,35.598,55.056,713.0
+168,test,Persistence,95,38.541,60.72,714.0
+168,test,Persistence,96,38.835,58.448,711.0
+168,test,Persistence,97,39.931,60.596,714.0
+168,test,Persistence,98,41.31,66.47,711.0
+168,test,Persistence,99,43.495,66.018,705.0
+168,test,Persistence,100,46.624,75.179,710.0
+168,test,Persistence,101,44.473,69.765,691.0
+168,test,Persistence,102,44.478,71.672,686.0
+168,test,Persistence,103,44.095,71.463,683.0
+168,test,Persistence,104,43.151,68.375,684.0
+168,test,Persistence,105,44.414,71.064,686.0
+168,test,Persistence,106,42.831,65.89,694.0
+168,test,Persistence,107,44.314,70.189,702.0
+168,test,Persistence,108,41.702,63.946,699.0
+168,test,Persistence,109,41.745,62.083,703.0
+168,test,Persistence,110,42.626,66.043,712.0
+168,test,Persistence,111,42.954,67.45,713.0
+168,test,Persistence,112,43.355,67.053,714.0
+168,test,Persistence,113,45.051,71.664,710.0
+168,test,Persistence,114,44.162,68.744,709.0
+168,test,Persistence,115,42.741,65.657,715.0
+168,test,Persistence,116,38.81,57.774,715.0
+168,test,Persistence,117,35.788,53.4,714.0
+168,test,Persistence,118,36.482,54.587,717.0
+168,test,Persistence,119,39.558,63.808,716.0
+168,test,Persistence,120,39.3,56.962,711.0
+168,test,Persistence,121,40.696,59.554,715.0
+168,test,Persistence,122,42.886,66.138,710.0
+168,test,Persistence,123,43.761,64.465,706.0
+168,test,Persistence,124,46.708,73.217,708.0
+168,test,Persistence,125,47.186,72.654,692.0
+168,test,Persistence,126,46.597,73.087,688.0
+168,test,Persistence,127,45.063,69.007,683.0
+168,test,Persistence,128,45.206,69.677,684.0
+168,test,Persistence,129,48.149,76.319,685.0
+168,test,Persistence,130,46.841,70.33,692.0
+168,test,Persistence,131,45.4,69.835,700.0
+168,test,Persistence,132,43.517,66.894,695.0
+168,test,Persistence,133,43.194,68.296,696.0
+168,test,Persistence,134,42.618,66.9,705.0
+168,test,Persistence,135,42.611,66.752,702.0
+168,test,Persistence,136,43.801,67.68,704.0
+168,test,Persistence,137,44.678,71.487,697.0
+168,test,Persistence,138,44.279,69.237,695.0
+168,test,Persistence,139,43.791,67.31,701.0
+168,test,Persistence,140,39.377,59.849,701.0
+168,test,Persistence,141,36.685,57.493,702.0
+168,test,Persistence,142,38.03,58.53,705.0
+168,test,Persistence,143,39.482,62.229,702.0
+168,test,Persistence,144,38.81,58.541,696.0
+168,test,Persistence,145,40.554,60.16,700.0
+168,test,Persistence,146,42.822,67.659,698.0
+168,test,Persistence,147,43.799,67.16,693.0
+168,test,Persistence,148,46.418,74.193,693.0
+168,test,Persistence,149,46.089,74.508,677.0
+168,test,Persistence,150,46.733,76.033,674.0
+168,test,Persistence,151,45.952,74.649,671.0
+168,test,Persistence,152,43.498,69.863,672.0
+168,test,Persistence,153,45.458,76.248,669.0
+168,test,Persistence,154,45.266,72.824,676.0
+168,test,Persistence,155,42.703,67.227,687.0
+168,test,Persistence,156,41.845,66.377,682.0
+168,test,Persistence,157,42.2,67.379,684.0
+168,test,Persistence,158,43.651,67.5,691.0
+168,test,Persistence,159,44.129,67.397,686.0
+168,test,Persistence,160,44.819,67.344,688.0
+168,test,Persistence,161,47.089,72.26,683.0
+168,test,Persistence,162,44.594,66.338,683.0
+168,test,Persistence,163,43.478,64.43,686.0
+168,test,Persistence,164,39.816,58.191,685.0
+168,test,Persistence,165,37.449,56.599,686.0
+168,test,Persistence,166,38.126,57.541,689.0
+168,test,Persistence,167,40.562,64.467,686.0
+168,test,Persistence,168,39.584,58.989,677.0
+168,validation,Daily repeat,1,42.43,67.894,735.0
+168,validation,Daily repeat,2,42.989,69.074,734.0
+168,validation,Daily repeat,3,45.949,74.208,729.0
+168,validation,Daily repeat,4,50.692,87.809,721.0
+168,validation,Daily repeat,5,48.16,79.688,725.0
+168,validation,Daily repeat,6,49.198,84.707,720.0
+168,validation,Daily repeat,7,51.063,90.107,723.0
+168,validation,Daily repeat,8,52.654,91.256,727.0
+168,validation,Daily repeat,9,47.774,84.039,730.0
+168,validation,Daily repeat,10,46.106,84.357,729.0
+168,validation,Daily repeat,11,38.303,68.999,718.0
+168,validation,Daily repeat,12,34.217,64.34,724.0
+168,validation,Daily repeat,13,27.993,49.518,710.0
+168,validation,Daily repeat,14,25.295,39.697,705.0
+168,validation,Daily repeat,15,22.895,34.012,712.0
+168,validation,Daily repeat,16,22.228,37.047,706.0
+168,validation,Daily repeat,17,22.754,38.278,704.0
+168,validation,Daily repeat,18,21.954,43.559,709.0
+168,validation,Daily repeat,19,22.995,42.834,717.0
+168,validation,Daily repeat,20,25.955,49.581,713.0
+168,validation,Daily repeat,21,30.201,53.047,706.0
+168,validation,Daily repeat,22,33.416,55.873,712.0
+168,validation,Daily repeat,23,38.186,66.012,717.0
+168,validation,Daily repeat,24,38.469,60.995,721.0
+168,validation,Daily repeat,25,50.878,80.896,721.0
+168,validation,Daily repeat,26,51.44,83.524,720.0
+168,validation,Daily repeat,27,52.714,82.005,713.0
+168,validation,Daily repeat,28,57.37,95.189,708.0
+168,validation,Daily repeat,29,57.009,93.559,712.0
+168,validation,Daily repeat,30,56.137,94.277,708.0
+168,validation,Daily repeat,31,61.127,100.539,710.0
+168,validation,Daily repeat,32,60.47,100.14,713.0
+168,validation,Daily repeat,33,55.389,91.367,715.0
+168,validation,Daily repeat,34,52.87,90.214,717.0
+168,validation,Daily repeat,35,43.754,73.876,707.0
+168,validation,Daily repeat,36,36.936,62.337,711.0
+168,validation,Daily repeat,37,31.858,52.974,697.0
+168,validation,Daily repeat,38,28.286,45.745,695.0
+168,validation,Daily repeat,39,26.256,38.911,703.0
+168,validation,Daily repeat,40,26.085,42.974,698.0
+168,validation,Daily repeat,41,25.892,40.802,698.0
+168,validation,Daily repeat,42,25.689,46.457,706.0
+168,validation,Daily repeat,43,26.963,47.66,713.0
+168,validation,Daily repeat,44,29.693,54.14,710.0
+168,validation,Daily repeat,45,33.998,56.376,699.0
+168,validation,Daily repeat,46,39.505,64.242,704.0
+168,validation,Daily repeat,47,46.75,78.299,713.0
+168,validation,Daily repeat,48,46.056,71.386,715.0
+168,validation,Daily repeat,49,53.342,82.689,714.0
+168,validation,Daily repeat,50,54.47,86.53,716.0
+168,validation,Daily repeat,51,55.783,89.45,711.0
+168,validation,Daily repeat,52,60.438,102.15,705.0
+168,validation,Daily repeat,53,62.243,100.783,707.0
+168,validation,Daily repeat,54,60.55,97.076,702.0
+168,validation,Daily repeat,55,61.909,101.794,708.0
+168,validation,Daily repeat,56,62.544,103.089,711.0
+168,validation,Daily repeat,57,56.805,92.859,712.0
+168,validation,Daily repeat,58,55.463,98.182,713.0
+168,validation,Daily repeat,59,47.616,83.526,703.0
+168,validation,Daily repeat,60,40.056,69.328,709.0
+168,validation,Daily repeat,61,34.343,56.446,697.0
+168,validation,Daily repeat,62,30.394,48.955,692.0
+168,validation,Daily repeat,63,28.413,41.402,701.0
+168,validation,Daily repeat,64,26.797,43.312,700.0
+168,validation,Daily repeat,65,26.582,39.959,700.0
+168,validation,Daily repeat,66,26.912,46.231,704.0
+168,validation,Daily repeat,67,28.773,49.811,716.0
+168,validation,Daily repeat,68,31.131,55.06,712.0
+168,validation,Daily repeat,69,35.786,59.067,702.0
+168,validation,Daily repeat,70,40.95,64.612,706.0
+168,validation,Daily repeat,71,47.928,78.791,712.0
+168,validation,Daily repeat,72,48.699,74.884,716.0
+168,validation,Daily repeat,73,55.002,84.587,715.0
+168,validation,Daily repeat,74,56.844,87.99,716.0
+168,validation,Daily repeat,75,58.988,90.288,715.0
+168,validation,Daily repeat,76,63.48,101.871,708.0
+168,validation,Daily repeat,77,64.145,100.311,710.0
+168,validation,Daily repeat,78,64.405,100.972,701.0
+168,validation,Daily repeat,79,67.758,110.498,710.0
+168,validation,Daily repeat,80,67.645,109.392,713.0
+168,validation,Daily repeat,81,61.3,99.661,715.0
+168,validation,Daily repeat,82,61.629,105.933,714.0
+168,validation,Daily repeat,83,52.952,90.886,707.0
+168,validation,Daily repeat,84,42.57,70.501,710.0
+168,validation,Daily repeat,85,37.039,54.909,700.0
+168,validation,Daily repeat,86,32.894,49.587,695.0
+168,validation,Daily repeat,87,30.574,44.5,704.0
+168,validation,Daily repeat,88,29.755,46.851,701.0
+168,validation,Daily repeat,89,29.196,44.791,700.0
+168,validation,Daily repeat,90,28.991,49.544,706.0
+168,validation,Daily repeat,91,30.126,50.252,716.0
+168,validation,Daily repeat,92,32.683,56.137,715.0
+168,validation,Daily repeat,93,36.606,60.608,705.0
+168,validation,Daily repeat,94,41.297,65.264,706.0
+168,validation,Daily repeat,95,50.285,79.441,715.0
+168,validation,Daily repeat,96,48.803,76.115,719.0
+168,validation,Daily repeat,97,54.58,84.15,716.0
+168,validation,Daily repeat,98,58.681,90.252,719.0
+168,validation,Daily repeat,99,60.891,92.203,717.0
+168,validation,Daily repeat,100,65.937,106.582,708.0
+168,validation,Daily repeat,101,66.855,106.233,711.0
+168,validation,Daily repeat,102,68.116,107.339,702.0
+168,validation,Daily repeat,103,69.051,110.483,710.0
+168,validation,Daily repeat,104,68.409,109.48,712.0
+168,validation,Daily repeat,105,63.849,103.717,712.0
+168,validation,Daily repeat,106,63.031,107.127,714.0
+168,validation,Daily repeat,107,54.869,93.085,704.0
+168,validation,Daily repeat,108,44.738,76.103,709.0
+168,validation,Daily repeat,109,37.759,58.783,696.0
+168,validation,Daily repeat,110,32.922,50.077,694.0
+168,validation,Daily repeat,111,30.001,43.674,703.0
+168,validation,Daily repeat,112,29.729,45.685,698.0
+168,validation,Daily repeat,113,28.979,44.074,700.0
+168,validation,Daily repeat,114,28.686,47.773,706.0
+168,validation,Daily repeat,115,29.981,48.589,715.0
+168,validation,Daily repeat,116,32.054,53.804,715.0
+168,validation,Daily repeat,117,36.451,59.085,702.0
+168,validation,Daily repeat,118,41.356,65.626,703.0
+168,validation,Daily repeat,119,49.723,77.396,713.0
+168,validation,Daily repeat,120,51.194,77.667,720.0
+168,validation,Daily repeat,121,55.739,87.051,719.0
+168,validation,Daily repeat,122,58.299,91.079,721.0
+168,validation,Daily repeat,123,60.677,93.526,714.0
+168,validation,Daily repeat,124,66.655,105.961,706.0
+168,validation,Daily repeat,125,67.933,105.757,711.0
+168,validation,Daily repeat,126,68.356,108.561,701.0
+168,validation,Daily repeat,127,70.286,113.632,709.0
+168,validation,Daily repeat,128,68.869,112.269,712.0
+168,validation,Daily repeat,129,64.436,107.72,710.0
+168,validation,Daily repeat,130,64.882,112.76,713.0
+168,validation,Daily repeat,131,55.838,94.953,701.0
+168,validation,Daily repeat,132,44.988,74.495,706.0
+168,validation,Daily repeat,133,37.939,59.454,694.0
+168,validation,Daily repeat,134,32.8,49.456,692.0
+168,validation,Daily repeat,135,30.487,44.404,699.0
+168,validation,Daily repeat,136,29.363,44.716,692.0
+168,validation,Daily repeat,137,29.06,43.562,692.0
+168,validation,Daily repeat,138,28.55,46.213,701.0
+168,validation,Daily repeat,139,28.958,46.363,706.0
+168,validation,Daily repeat,140,31.396,50.791,702.0
+168,validation,Daily repeat,141,36.19,58.38,691.0
+168,validation,Daily repeat,142,43.266,68.464,696.0
+168,validation,Daily repeat,143,50.78,80.559,703.0
+168,validation,Daily repeat,144,50.124,74.446,703.0
+168,validation,Daily repeat,145,57.693,87.162,703.0
+168,validation,Daily repeat,146,59.107,91.292,706.0
+168,validation,Daily repeat,147,60.893,93.746,704.0
+168,validation,Daily repeat,148,68.051,110.34,694.0
+168,validation,Daily repeat,149,71.287,112.118,700.0
+168,validation,Daily repeat,150,69.559,109.495,693.0
+168,validation,Daily repeat,151,71.569,116.576,694.0
+168,validation,Daily repeat,152,72.83,118.738,698.0
+168,validation,Daily repeat,153,69.294,111.654,697.0
+168,validation,Daily repeat,154,67.5,114.78,704.0
+168,validation,Daily repeat,155,56.748,93.155,690.0
+168,validation,Daily repeat,156,45.061,74.803,694.0
+168,validation,Daily repeat,157,37.709,57.873,681.0
+168,validation,Daily repeat,158,33.883,49.266,680.0
+168,validation,Daily repeat,159,31.065,44.855,686.0
+168,validation,Daily repeat,160,29.6,45.784,682.0
+168,validation,Daily repeat,161,30.138,45.093,681.0
+168,validation,Daily repeat,162,28.674,45.42,687.0
+168,validation,Daily repeat,163,30.207,48.049,695.0
+168,validation,Daily repeat,164,31.451,53.568,690.0
+168,validation,Daily repeat,165,36.216,58.525,680.0
+168,validation,Daily repeat,166,44.539,69.457,681.0
+168,validation,Daily repeat,167,52.304,81.971,690.0
+168,validation,Daily repeat,168,52.447,76.988,692.0
+168,validation,Gradient boosting,1,33.434,50.687,735.0
+168,validation,Gradient boosting,2,33.446,50.844,734.0
+168,validation,Gradient boosting,3,35.27,53.76,729.0
+168,validation,Gradient boosting,4,38.484,65.162,721.0
+168,validation,Gradient boosting,5,39.44,63.467,725.0
+168,validation,Gradient boosting,6,39.908,63.881,720.0
+168,validation,Gradient boosting,7,40.974,69.216,723.0
+168,validation,Gradient boosting,8,41.597,71.254,727.0
+168,validation,Gradient boosting,9,39.487,63.015,730.0
+168,validation,Gradient boosting,10,39.1,69.543,729.0
+168,validation,Gradient boosting,11,34.801,57.501,718.0
+168,validation,Gradient boosting,12,30.376,48.967,724.0
+168,validation,Gradient boosting,13,26.014,40.549,710.0
+168,validation,Gradient boosting,14,24.179,35.237,705.0
+168,validation,Gradient boosting,15,23.16,32.409,712.0
+168,validation,Gradient boosting,16,22.925,35.346,706.0
+168,validation,Gradient boosting,17,23.465,35.311,704.0
+168,validation,Gradient boosting,18,22.528,37.075,709.0
+168,validation,Gradient boosting,19,23.063,37.522,717.0
+168,validation,Gradient boosting,20,23.404,40.995,713.0
+168,validation,Gradient boosting,21,26.937,43.181,706.0
+168,validation,Gradient boosting,22,30.417,46.68,712.0
+168,validation,Gradient boosting,23,35.308,56.802,717.0
+168,validation,Gradient boosting,24,36.167,53.713,721.0
+168,validation,Gradient boosting,25,39.912,60.824,721.0
+168,validation,Gradient boosting,26,39.745,60.35,720.0
+168,validation,Gradient boosting,27,40.891,61.812,713.0
+168,validation,Gradient boosting,28,43.786,71.493,708.0
+168,validation,Gradient boosting,29,45.188,72.284,712.0
+168,validation,Gradient boosting,30,44.433,70.457,708.0
+168,validation,Gradient boosting,31,46.548,77.008,710.0
+168,validation,Gradient boosting,32,46.636,77.029,713.0
+168,validation,Gradient boosting,33,42.842,68.344,715.0
+168,validation,Gradient boosting,34,43.734,76.417,717.0
+168,validation,Gradient boosting,35,37.702,63.321,707.0
+168,validation,Gradient boosting,36,33.22,53.229,711.0
+168,validation,Gradient boosting,37,28.402,43.518,697.0
+168,validation,Gradient boosting,38,25.567,37.753,695.0
+168,validation,Gradient boosting,39,24.561,34.156,703.0
+168,validation,Gradient boosting,40,24.301,37.652,698.0
+168,validation,Gradient boosting,41,24.595,36.536,698.0
+168,validation,Gradient boosting,42,23.281,37.858,706.0
+168,validation,Gradient boosting,43,23.459,39.22,713.0
+168,validation,Gradient boosting,44,25.083,43.022,710.0
+168,validation,Gradient boosting,45,29.404,44.542,699.0
+168,validation,Gradient boosting,46,33.844,50.202,704.0
+168,validation,Gradient boosting,47,39.793,62.036,713.0
+168,validation,Gradient boosting,48,39.453,57.965,715.0
+168,validation,Gradient boosting,49,42.725,63.974,714.0
+168,validation,Gradient boosting,50,42.63,67.094,716.0
+168,validation,Gradient boosting,51,43.757,66.424,711.0
+168,validation,Gradient boosting,52,47.504,78.107,705.0
+168,validation,Gradient boosting,53,48.373,78.017,707.0
+168,validation,Gradient boosting,54,46.319,74.704,702.0
+168,validation,Gradient boosting,55,48.198,80.648,708.0
+168,validation,Gradient boosting,56,47.496,78.83,711.0
+168,validation,Gradient boosting,57,45.24,73.027,712.0
+168,validation,Gradient boosting,58,44.979,79.868,713.0
+168,validation,Gradient boosting,59,39.056,65.376,703.0
+168,validation,Gradient boosting,60,33.925,55.337,709.0
+168,validation,Gradient boosting,61,29.599,45.58,697.0
+168,validation,Gradient boosting,62,26.505,39.463,692.0
+168,validation,Gradient boosting,63,24.975,35.514,701.0
+168,validation,Gradient boosting,64,24.351,37.677,700.0
+168,validation,Gradient boosting,65,23.912,35.526,700.0
+168,validation,Gradient boosting,66,22.747,36.009,704.0
+168,validation,Gradient boosting,67,23.807,39.231,716.0
+168,validation,Gradient boosting,68,26.225,43.973,712.0
+168,validation,Gradient boosting,69,30.475,46.324,702.0
+168,validation,Gradient boosting,70,34.951,52.5,706.0
+168,validation,Gradient boosting,71,41.115,64.858,712.0
+168,validation,Gradient boosting,72,42.462,63.766,716.0
+168,validation,Gradient boosting,73,45.14,67.74,715.0
+168,validation,Gradient boosting,74,45.013,69.54,716.0
+168,validation,Gradient boosting,75,45.743,68.89,715.0
+168,validation,Gradient boosting,76,49.457,79.567,708.0
+168,validation,Gradient boosting,77,50.768,81.225,710.0
+168,validation,Gradient boosting,78,49.887,77.906,701.0
+168,validation,Gradient boosting,79,51.705,83.243,710.0
+168,validation,Gradient boosting,80,51.047,82.572,713.0
+168,validation,Gradient boosting,81,47.875,74.951,715.0
+168,validation,Gradient boosting,82,47.529,82.415,714.0
+168,validation,Gradient boosting,83,40.853,67.271,707.0
+168,validation,Gradient boosting,84,35.06,56.151,710.0
+168,validation,Gradient boosting,85,31.045,46.131,700.0
+168,validation,Gradient boosting,86,28.193,40.557,695.0
+168,validation,Gradient boosting,87,26.385,36.65,704.0
+168,validation,Gradient boosting,88,26.377,40.155,701.0
+168,validation,Gradient boosting,89,26.11,38.819,700.0
+168,validation,Gradient boosting,90,24.651,39.718,706.0
+168,validation,Gradient boosting,91,25.281,40.116,716.0
+168,validation,Gradient boosting,92,27.488,45.651,715.0
+168,validation,Gradient boosting,93,31.015,47.491,705.0
+168,validation,Gradient boosting,94,35.453,52.541,706.0
+168,validation,Gradient boosting,95,42.006,65.652,715.0
+168,validation,Gradient boosting,96,42.737,64.216,719.0
+168,validation,Gradient boosting,97,45.128,68.22,716.0
+168,validation,Gradient boosting,98,45.273,69.61,719.0
+168,validation,Gradient boosting,99,45.57,68.642,717.0
+168,validation,Gradient boosting,100,48.872,79.68,708.0
+168,validation,Gradient boosting,101,51.028,81.674,711.0
+168,validation,Gradient boosting,102,49.909,78.222,702.0
+168,validation,Gradient boosting,103,52.258,82.63,710.0
+168,validation,Gradient boosting,104,50.807,80.974,712.0
+168,validation,Gradient boosting,105,47.621,75.243,712.0
+168,validation,Gradient boosting,106,48.247,83.107,714.0
+168,validation,Gradient boosting,107,41.759,68.884,704.0
+168,validation,Gradient boosting,108,35.517,55.933,709.0
+168,validation,Gradient boosting,109,30.462,45.33,696.0
+168,validation,Gradient boosting,110,28.125,40.284,694.0
+168,validation,Gradient boosting,111,26.372,36.945,703.0
+168,validation,Gradient boosting,112,26.597,38.39,698.0
+168,validation,Gradient boosting,113,26.659,37.866,700.0
+168,validation,Gradient boosting,114,24.56,34.902,706.0
+168,validation,Gradient boosting,115,24.948,36.537,715.0
+168,validation,Gradient boosting,116,26.666,42.021,715.0
+168,validation,Gradient boosting,117,30.879,46.554,702.0
+168,validation,Gradient boosting,118,35.363,51.6,703.0
+168,validation,Gradient boosting,119,41.763,64.408,713.0
+168,validation,Gradient boosting,120,43.606,64.835,720.0
+168,validation,Gradient boosting,121,45.173,67.179,719.0
+168,validation,Gradient boosting,122,45.763,70.157,721.0
+168,validation,Gradient boosting,123,45.075,67.741,714.0
+168,validation,Gradient boosting,124,48.546,78.499,706.0
+168,validation,Gradient boosting,125,50.137,78.752,711.0
+168,validation,Gradient boosting,126,49.801,77.996,701.0
+168,validation,Gradient boosting,127,51.083,82.095,709.0
+168,validation,Gradient boosting,128,50.884,82.235,712.0
+168,validation,Gradient boosting,129,47.125,75.532,710.0
+168,validation,Gradient boosting,130,47.149,82.638,713.0
+168,validation,Gradient boosting,131,41.242,66.809,701.0
+168,validation,Gradient boosting,132,35.719,55.831,706.0
+168,validation,Gradient boosting,133,30.752,44.987,694.0
+168,validation,Gradient boosting,134,28.018,38.968,692.0
+168,validation,Gradient boosting,135,26.669,37.144,699.0
+168,validation,Gradient boosting,136,26.222,37.386,692.0
+168,validation,Gradient boosting,137,25.766,36.01,692.0
+168,validation,Gradient boosting,138,24.129,33.148,701.0
+168,validation,Gradient boosting,139,24.142,33.983,706.0
+168,validation,Gradient boosting,140,25.979,38.253,702.0
+168,validation,Gradient boosting,141,31.21,46.614,691.0
+168,validation,Gradient boosting,142,37.661,54.836,696.0
+168,validation,Gradient boosting,143,42.828,66.102,703.0
+168,validation,Gradient boosting,144,43.697,62.882,703.0
+168,validation,Gradient boosting,145,46.772,68.734,703.0
+168,validation,Gradient boosting,146,46.385,71.046,706.0
+168,validation,Gradient boosting,147,46.121,68.858,704.0
+168,validation,Gradient boosting,148,49.486,79.14,694.0
+168,validation,Gradient boosting,149,52.093,82.045,700.0
+168,validation,Gradient boosting,150,51.534,80.084,693.0
+168,validation,Gradient boosting,151,52.725,83.852,694.0
+168,validation,Gradient boosting,152,52.029,83.445,698.0
+168,validation,Gradient boosting,153,48.706,76.609,697.0
+168,validation,Gradient boosting,154,49.265,84.13,704.0
+168,validation,Gradient boosting,155,41.727,66.395,690.0
+168,validation,Gradient boosting,156,35.885,55.418,694.0
+168,validation,Gradient boosting,157,31.186,45.336,681.0
+168,validation,Gradient boosting,158,27.838,38.397,680.0
+168,validation,Gradient boosting,159,26.97,36.342,686.0
+168,validation,Gradient boosting,160,26.44,37.302,682.0
+168,validation,Gradient boosting,161,26.52,36.933,681.0
+168,validation,Gradient boosting,162,24.325,32.777,687.0
+168,validation,Gradient boosting,163,25.436,35.07,695.0
+168,validation,Gradient boosting,164,27.321,41.472,690.0
+168,validation,Gradient boosting,165,32.51,46.962,680.0
+168,validation,Gradient boosting,166,38.267,54.227,681.0
+168,validation,Gradient boosting,167,44.18,67.694,690.0
+168,validation,Gradient boosting,168,44.077,63.048,692.0
+168,validation,Persistence,1,16.862,38.728,735.0
+168,validation,Persistence,2,22.887,39.809,734.0
+168,validation,Persistence,3,28.867,51.623,729.0
+168,validation,Persistence,4,33.591,62.862,721.0
+168,validation,Persistence,5,36.253,62.292,725.0
+168,validation,Persistence,6,39.041,65.148,720.0
+168,validation,Persistence,7,40.99,70.233,723.0
+168,validation,Persistence,8,42.217,73.213,727.0
+168,validation,Persistence,9,39.708,65.866,730.0
+168,validation,Persistence,10,40.256,70.059,729.0
+168,validation,Persistence,11,36.655,60.696,718.0
+168,validation,Persistence,12,35.351,59.348,724.0
+168,validation,Persistence,13,37.534,63.289,710.0
+168,validation,Persistence,14,39.261,66.231,705.0
+168,validation,Persistence,15,42.009,69.08,712.0
+168,validation,Persistence,16,45.095,74.827,706.0
+168,validation,Persistence,17,47.716,77.326,704.0
+168,validation,Persistence,18,48.655,79.158,709.0
+168,validation,Persistence,19,46.421,74.877,717.0
+168,validation,Persistence,20,41.251,69.047,713.0
+168,validation,Persistence,21,37.63,60.497,706.0
+168,validation,Persistence,22,36.329,56.73,712.0
+168,validation,Persistence,23,38.61,62.39,717.0
+168,validation,Persistence,24,38.469,60.995,721.0
+168,validation,Persistence,25,41.091,65.962,721.0
+168,validation,Persistence,26,41.149,65.149,720.0
+168,validation,Persistence,27,44.109,68.829,713.0
+168,validation,Persistence,28,47.563,77.377,708.0
+168,validation,Persistence,29,46.337,72.858,712.0
+168,validation,Persistence,30,46.128,73.687,708.0
+168,validation,Persistence,31,48.865,80.866,710.0
+168,validation,Persistence,32,49.212,82.596,713.0
+168,validation,Persistence,33,45.912,74.237,715.0
+168,validation,Persistence,34,47.08,80.113,717.0
+168,validation,Persistence,35,44.323,72.72,707.0
+168,validation,Persistence,36,41.912,68.149,711.0
+168,validation,Persistence,37,43.984,71.644,697.0
+168,validation,Persistence,38,45.474,74.535,695.0
+168,validation,Persistence,39,45.647,73.516,703.0
+168,validation,Persistence,40,48.765,80.36,698.0
+168,validation,Persistence,41,50.65,82.106,698.0
+168,validation,Persistence,42,49.482,80.556,706.0
+168,validation,Persistence,43,49.267,80.657,713.0
+168,validation,Persistence,44,45.352,75.886,710.0
+168,validation,Persistence,45,42.729,67.904,699.0
+168,validation,Persistence,46,43.727,69.136,704.0
+168,validation,Persistence,47,46.336,73.8,713.0
+168,validation,Persistence,48,46.056,71.386,715.0
+168,validation,Persistence,49,48.201,76.951,714.0
+168,validation,Persistence,50,49.101,78.902,716.0
+168,validation,Persistence,51,49.72,76.586,711.0
+168,validation,Persistence,52,53.398,86.54,705.0
+168,validation,Persistence,53,53.11,83.478,707.0
+168,validation,Persistence,54,51.083,78.108,702.0
+168,validation,Persistence,55,53.371,84.665,708.0
+168,validation,Persistence,56,53.416,85.43,711.0
+168,validation,Persistence,57,50.671,79.707,712.0
+168,validation,Persistence,58,50.053,83.433,713.0
+168,validation,Persistence,59,46.145,74.54,703.0
+168,validation,Persistence,60,45.18,72.835,709.0
+168,validation,Persistence,61,44.949,72.977,697.0
+168,validation,Persistence,62,45.332,74.277,692.0
+168,validation,Persistence,63,45.999,72.839,701.0
+168,validation,Persistence,64,49.839,80.092,700.0
+168,validation,Persistence,65,51.976,81.38,700.0
+168,validation,Persistence,66,51.069,80.528,704.0
+168,validation,Persistence,67,50.684,81.121,716.0
+168,validation,Persistence,68,47.606,76.619,712.0
+168,validation,Persistence,69,44.323,68.215,702.0
+168,validation,Persistence,70,44.399,68.692,706.0
+168,validation,Persistence,71,48.276,77.11,712.0
+168,validation,Persistence,72,48.699,74.884,716.0
+168,validation,Persistence,73,50.139,80.12,715.0
+168,validation,Persistence,74,49.383,79.336,716.0
+168,validation,Persistence,75,50.035,78.806,715.0
+168,validation,Persistence,76,53.265,88.161,708.0
+168,validation,Persistence,77,54.471,88.706,710.0
+168,validation,Persistence,78,54.83,83.791,701.0
+168,validation,Persistence,79,56.683,88.575,710.0
+168,validation,Persistence,80,56.84,89.327,713.0
+168,validation,Persistence,81,53.21,82.755,715.0
+168,validation,Persistence,82,53.116,88.625,714.0
+168,validation,Persistence,83,49.511,80.481,707.0
+168,validation,Persistence,84,47.268,74.336,710.0
+168,validation,Persistence,85,46.521,72.954,700.0
+168,validation,Persistence,86,47.523,74.426,695.0
+168,validation,Persistence,87,48.645,75.773,704.0
+168,validation,Persistence,88,50.656,78.13,701.0
+168,validation,Persistence,89,52.547,79.78,700.0
+168,validation,Persistence,90,52.495,81.866,706.0
+168,validation,Persistence,91,51.269,79.855,716.0
+168,validation,Persistence,92,48.201,75.6,715.0
+168,validation,Persistence,93,44.417,68.984,705.0
+168,validation,Persistence,94,44.738,67.926,706.0
+168,validation,Persistence,95,49.98,77.602,715.0
+168,validation,Persistence,96,48.803,76.115,719.0
+168,validation,Persistence,97,51.543,80.25,716.0
+168,validation,Persistence,98,51.107,78.736,719.0
+168,validation,Persistence,99,51.094,76.611,717.0
+168,validation,Persistence,100,55.098,86.457,708.0
+168,validation,Persistence,101,56.079,87.977,711.0
+168,validation,Persistence,102,55.377,85.208,702.0
+168,validation,Persistence,103,57.013,88.887,710.0
+168,validation,Persistence,104,56.748,88.234,712.0
+168,validation,Persistence,105,54.203,83.744,712.0
+168,validation,Persistence,106,55.31,90.843,714.0
+168,validation,Persistence,107,51.894,82.826,704.0
+168,validation,Persistence,108,49.238,76.622,709.0
+168,validation,Persistence,109,47.961,73.96,696.0
+168,validation,Persistence,110,47.781,73.247,694.0
+168,validation,Persistence,111,49.162,75.054,703.0
+168,validation,Persistence,112,51.169,78.836,698.0
+168,validation,Persistence,113,53.008,80.744,700.0
+168,validation,Persistence,114,52.015,79.247,706.0
+168,validation,Persistence,115,51.11,78.329,715.0
+168,validation,Persistence,116,47.057,73.263,715.0
+168,validation,Persistence,117,43.787,67.203,702.0
+168,validation,Persistence,118,44.933,67.787,703.0
+168,validation,Persistence,119,49.684,76.55,713.0
+168,validation,Persistence,120,51.194,77.667,720.0
+168,validation,Persistence,121,51.024,78.404,719.0
+168,validation,Persistence,122,52.597,80.81,721.0
+168,validation,Persistence,123,53.057,80.276,714.0
+168,validation,Persistence,124,55.72,88.037,706.0
+168,validation,Persistence,125,56.062,87.136,711.0
+168,validation,Persistence,126,57.148,88.075,701.0
+168,validation,Persistence,127,58.38,91.835,709.0
+168,validation,Persistence,128,58.553,92.507,712.0
+168,validation,Persistence,129,56.008,87.739,710.0
+168,validation,Persistence,130,54.954,91.096,713.0
+168,validation,Persistence,131,50.783,80.645,701.0
+168,validation,Persistence,132,49.589,79.006,706.0
+168,validation,Persistence,133,49.042,76.17,694.0
+168,validation,Persistence,134,48.929,76.523,692.0
+168,validation,Persistence,135,49.9,77.621,699.0
+168,validation,Persistence,136,52.693,82.015,692.0
+168,validation,Persistence,137,54.445,84.04,692.0
+168,validation,Persistence,138,52.634,81.286,701.0
+168,validation,Persistence,139,52.08,80.504,706.0
+168,validation,Persistence,140,48.988,75.242,702.0
+168,validation,Persistence,141,45.342,69.649,691.0
+168,validation,Persistence,142,47.028,70.912,696.0
+168,validation,Persistence,143,50.643,78.469,703.0
+168,validation,Persistence,144,50.124,74.446,703.0
+168,validation,Persistence,145,52.667,81.348,703.0
+168,validation,Persistence,146,54.13,83.633,706.0
+168,validation,Persistence,147,53.878,82.278,704.0
+168,validation,Persistence,148,57.694,91.507,694.0
+168,validation,Persistence,149,59.26,92.416,700.0
+168,validation,Persistence,150,59.953,92.651,693.0
+168,validation,Persistence,151,61.168,94.799,694.0
+168,validation,Persistence,152,60.88,95.629,698.0
+168,validation,Persistence,153,58.543,89.697,697.0
+168,validation,Persistence,154,58.371,94.593,704.0
+168,validation,Persistence,155,52.69,82.326,690.0
+168,validation,Persistence,156,49.469,76.039,694.0
+168,validation,Persistence,157,49.369,76.397,681.0
+168,validation,Persistence,158,49.365,76.587,680.0
+168,validation,Persistence,159,50.889,77.73,686.0
+168,validation,Persistence,160,52.535,81.763,682.0
+168,validation,Persistence,161,53.723,83.576,681.0
+168,validation,Persistence,162,52.351,80.647,687.0
+168,validation,Persistence,163,52.195,80.495,695.0
+168,validation,Persistence,164,49.278,76.494,690.0
+168,validation,Persistence,165,46.851,71.539,680.0
+168,validation,Persistence,166,49.403,73.756,681.0
+168,validation,Persistence,167,53.763,82.815,690.0
+168,validation,Persistence,168,52.447,76.988,692.0

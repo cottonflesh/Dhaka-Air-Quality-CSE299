@@ -1,0 +1,19 @@
+{
+  "data_file": "data/processed/Dhaka_CAMS_Cleaned_2012_2024.csv",
+  "train_until": "2022-12-31",
+  "validation": "2023",
+  "test": "2024",
+  "context_hours": 168,
+  "daily_forecast_origin": "23:00",
+  "horizons_hours": [
+    24,
+    168
+  ],
+  "train_origins_per_station_limit": 250,
+  "eval_origins_per_station_limit": 0,
+  "iterations": 100,
+  "context_coverage_threshold": 0.7,
+  "target_coverage_threshold": 0.7,
+  "missing_future_values": "excluded from scoring",
+  "context_imputation": "within preceding 168 hours only"
+}
