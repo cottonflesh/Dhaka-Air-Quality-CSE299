@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dhaka Air Quality | Week 9 Analytics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{background:#080d18;color:#e5edf8;font-family:Inter,sans-serif}
+    .panel{background:#101a2b;border:1px solid #24334a;border-radius:18px}
+    .muted{color:#91a2ba}.metric{font-variant-numeric:tabular-nums}
+    select{background:#0b1422;border:1px solid #31415a;border-radius:10px;padding:9px;color:#e5edf8}
+    .chart-wrap{height:320px}
+  </style>
+</head>
+<body>
+<header class="border-b border-slate-800 bg-[#0b1321]">
+  <div class="max-w-7xl mx-auto px-5 py-5 flex flex-wrap items-center justify-between gap-3">
+    <div><p class="text-cyan-400 text-xs font-bold tracking-[.2em]">CSE299 · WEEK 9</p><h1 class="text-2xl font-extrabold mt-1">Dhaka Air Quality Analytics</h1><p class="muted text-sm mt-1">Historical insights · model evaluation · forecast error analysis</p></div>
+    <a href="/" class="text-sm text-cyan-300 hover:text-white">← Back to Week 8 predictor</a>
+  </div>
+</header>
+<main class="max-w-7xl mx-auto p-5 space-y-6">
+  <section class="panel p-4 flex flex-wrap items-end gap-4">
+    <label class="text-xs muted">Monitoring station<br><select id="station"><option>All</option><option>BARC</option><option>Darussalam</option><option>DoE</option></select></label>
+    <label class="text-xs muted">From year<br><select id="startYear"></select></label>
+    <label class="text-xs muted">To year<br><select id="endYear"></select></label>
+    <label class="text-xs muted">Historical interval<br><select id="frequency"><option value="month">Monthly average</option><option value="day">Daily average</option></select></label>
+    <button id="refresh" class="rounded-xl bg-cyan-600 hover:bg-cyan-500 px-5 py-2.5 text-sm font-bold">Update dashboard</button>
+    <span id="status" class="text-xs muted">Loading project data…</span>
+  </section>
+  <section class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div class="panel p-5"><p class="muted text-xs">Cleaned records in selection</p><p id="records" class="metric text-3xl font-extrabold mt-2">—</p><p class="muted text-xs mt-2">Filtered historical rows</p></div>
+    <div class="panel p-5"><p class="muted text-xs">PM2.5 measurements</p><p id="observed" class="metric text-3xl font-extrabold mt-2">—</p><p class="muted text-xs mt-2">Non-missing observations</p></div>
+    <div class="panel p-5"><p class="muted text-xs">Latest recorded PM2.5</p><p id="latest" class="metric text-3xl font-extrabold mt-2">—</p><p id="latestMeta" class="muted text-xs mt-2">µg/m³ · historical record</p></div>
+    <div class="panel p-5"><p class="muted text-xs">Dataset coverage period</p><p id="period" class="metric text-lg font-bold mt-3">—</p><p class="muted text-xs mt-2">CAMS-BD cleaned dataset</p></div>
+  </section>
+  <section class="grid xl:grid-cols-2 gap-5">
+    <div class="panel p-5"><div class="flex justify-between gap-3 items-start mb-4"><div><h2 class="font-bold">Historical pollutant trend</h2><p class="muted text-xs mt-1">Average PM2.5 and PM10 by selected interval</p></div><span class="text-cyan-300 text-xs">µg/m³</span></div><div class="chart-wrap"><canvas id="historyChart"></canvas></div></div>
+    <div class="panel p-5"><div class="mb-4"><h2 class="font-bold">Station data coverage</h2><p class="muted text-xs mt-1">Share of rows containing a PM2.5 reading</p></div><div class="chart-wrap"><canvas id="coverageChart"></canvas></div></div>
+    <div class="panel p-5"><div class="mb-4"><h2 class="font-bold">Forecast model comparison</h2><p class="muted text-xs mt-1">Week 8 validation (2023) and test (2024) MAE</p></div><div class="chart-wrap"><canvas id="modelChart"></canvas></div><p class="muted text-xs mt-3">Lower MAE is better. Values are PM2.5 concentration errors, not AQI.</p></div>
+    <div class="panel p-5"><div class="flex flex-wrap justify-between items-center gap-3 mb-4"><div><h2 class="font-bold">Forecast error by lead hour</h2><p class="muted text-xs mt-1">Gradient Boosting test-set error</p></div><select id="horizon"><option value="24">24-hour forecast</option><option value="168">7-day forecast</option></select></div><div class="chart-wrap"><canvas id="errorChart"></canvas></div><p class="muted text-xs mt-3">MAE shows average absolute error for each forecast lead.</p></div>
+  </section>
+  <section class="panel p-5">
+    <h2 class="font-bold">Station summary</h2><p class="muted text-xs mt-1 mb-4">Historical records available for each Dhaka monitoring station</p>
+    <div class="overflow-x-auto"><table class="w-full text-sm"><thead class="muted text-left border-b border-slate-700"><tr><th class="py-3">Station</th><th>Rows</th><th>PM2.5 observed</th><th>PM2.5 coverage</th><th>Latest PM2.5</th><th>Latest timestamp</th></tr></thead><tbody id="stationRows"></tbody></table></div>
+  </section>
+  <p class="muted text-xs leading-5">Data source: <code>data/processed/Dhaka_CAMS_Cleaned_2012_2024.csv</code> and Week 8 evaluation outputs. This is historical analysis, not a live sensor feed. Forecast charts show PM2.5 concentration (µg/m³), not official AQI.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id), charts={};
+Chart.defaults.color='#9aabc1';Chart.defaults.font.family='Inter';
+const grid='#26364c';
+function fmt(n){return n==null?'—':Number(n).toLocaleString(undefined,{maximumFractionDigits:2})}
+function chart(id,type,data,options){if(charts[id])charts[id].destroy();charts[id]=new Chart($(id),{type,data,options:{responsive:true,maintainAspectRatio:false,...options}})}
+function fillYears(){for(let y=2012;y<=2024;y++){$('startYear').add(new Option(y,y));$('endYear').add(new Option(y,y));}$('startYear').value='2012';$('endYear').value='2024';}
+async function getJSON(url){const r=await fetch(url);const d=await r.json();if(!r.ok)throw new Error(d.detail||'Dashboard request failed');return d}
+async function load(){
+  $('status').textContent='Loading…';
+  const station=$('station').value,sy=$('startYear').value,ey=$('endYear').value,freq=$('frequency').value;
+  if(Number(sy)>Number(ey)){$('status').textContent='Start year must not be after end year.';return;}
+  try{
+    const params=`station=${encodeURIComponent(station)}&start_year=${sy}&end_year=${ey}`;
+    const [summary,history,metrics,errors]=await Promise.all([
+      getJSON('/api/dashboard/summary?'+params),
+      getJSON('/api/dashboard/history?'+params+'&frequency='+freq),
+      getJSON('/api/dashboard/model-metrics'),
+      getJSON('/api/dashboard/error-analysis?horizon='+$('horizon').value)
+    ]);
+    $('records').textContent=fmt(summary.record_count);$('observed').textContent=fmt(summary.pm25_observed);
+    const last=summary.latest_observation;
+    $('latest').textContent=last?fmt(last.pm25):'—';
+    $('latestMeta').textContent=last?`${last.station} · ${last.datetime.replace('T',' ').slice(0,16)} · µg/m³`:'No PM2.5 reading found';
+    $('period').textContent=summary.period_start&&summary.period_end?`${summary.period_start} → ${summary.period_end}`:'—';
+    chart('historyChart','line',{labels:history.labels,datasets:[
+      {label:'PM2.5',data:history.pm25,borderColor:'#22d3ee',backgroundColor:'#22d3ee22',fill:true,tension:.25,pointRadius:0,spanGaps:true},
+      {label:'PM10',data:history.pm10,borderColor:'#f59e0b',backgroundColor:'#f59e0b22',fill:false,tension:.25,pointRadius:0,spanGaps:true}
+    ]},{interaction:{mode:'index',intersect:false},scales:{x:{ticks:{maxTicksLimit:10},grid:{color:grid}},y:{beginAtZero:true,title:{display:true,text:'µg/m³'},grid:{color:grid}}}});
+    chart('coverageChart','bar',{labels:summary.stations.map(x=>x.station),datasets:[{label:'PM2.5 coverage (%)',data:summary.stations.map(x=>x.pm25_coverage_pct),backgroundColor:'#34d399',borderRadius:7}]},{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,max:100,grid:{color:grid}},y:{grid:{display:false}}}});
+    const rows=metrics.records.filter(x=>x.Split==='test'||x.Split==='validation');
+    const models=[...new Set(rows.map(x=>x.Model))],labels=[...new Set(rows.map(x=>`${x.HorizonHours}h · ${x.Split}`))];
+    chart('modelChart','bar',{labels,datasets:models.map((m,i)=>({label:m,data:labels.map(l=>{const [h,s]=l.split(' · ');const r=rows.find(x=>x.Model===m&&Number(x.HorizonHours)===Number(h.replace('h',''))&&x.Split===s);return r?Number(r.MAE):null}),backgroundColor:['#22d3ee','#f59e0b','#a78bfa'][i%3],borderRadius:5}))},{scales:{x:{grid:{display:false}},y:{beginAtZero:true,title:{display:true,text:'MAE (µg/m³)'},grid:{color:grid}}}});
+    chart('errorChart','line',{labels:errors.records.map(x=>x.LeadHour),datasets:[{label:'MAE',data:errors.records.map(x=>Number(x.MAE)),borderColor:'#fb7185',backgroundColor:'#fb718522',fill:true,tension:.2,pointRadius:0}]},{scales:{x:{title:{display:true,text:'Forecast lead hour'},grid:{display:false}},y:{beginAtZero:true,title:{display:true,text:'MAE (µg/m³)'},grid:{color:grid}}}});
+    $('stationRows').innerHTML=summary.stations.map(s=>`<tr class="border-b border-slate-800/70"><td class="py-3 font-semibold">${s.station}</td><td>${fmt(s.records)}</td><td>${fmt(s.pm25_observed)}</td><td>${fmt(s.pm25_coverage_pct)}%</td><td>${fmt(s.latest_pm25)}</td><td class="muted text-xs">${s.latest_datetime?s.latest_datetime.replace('T',' ').slice(0,16):'—'}</td></tr>`).join('');
+    $('status').textContent=summary.data_note;
+  }catch(e){$('status').textContent='Error: '+e.message;console.error(e);}
+}
+$('refresh').addEventListener('click',load);$('horizon').addEventListener('change',load);
+fillYears();load();
+</script>
+</body>
+</html>
